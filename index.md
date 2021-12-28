@@ -20,7 +20,7 @@ Twitter: [@barretobit](https://twitter.com/barretobit)
 
 Location: Lisbon, Portugal
 
- 
+<p>&nbsp;</p>
 
 <p align="center" width="100%">
     <img width="150px" src="https://randombit2blog.files.wordpress.com/2018/03/randombitsmall.jpg"> 
