@@ -1,4 +1,6 @@
-## Services
+## RandomBit
+
+### Services
 
 - Web Application Development
 - Desktop Application Development
@@ -8,7 +10,7 @@
 - Business Email Management
 - Custom PC Building
 
-## Contacts
+### Contacts
 
 Phone: +351 912 321 413
 
