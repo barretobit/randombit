@@ -4038,7 +4038,7 @@ textarea.form-control-lg {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  padding-top: 0.5rem;
+  padding-top: 1.6rem;
   padding-bottom: 0.5rem;
 }
 .navbar > .container,
@@ -4048,7 +4048,7 @@ textarea.form-control-lg {
 .navbar > .container-lg,
 .navbar > .container-xl,
 .navbar > .container-xxl {
-  display: flex;
+  /* display: flex; */
   flex-wrap: inherit;
   align-items: center;
   justify-content: space-between;
@@ -7688,6 +7688,10 @@ textarea.form-control-lg {
 
 .text-center {
   text-align: center !important;
+}
+
+.text-right {
+  text-align: right !important;
 }
 
 .text-decoration-none {
