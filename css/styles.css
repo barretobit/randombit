@@ -337,6 +337,12 @@ button {
   border-radius: 0;
 }
 
+.headerImage {
+  background-image: linear-gradient(rgba(33, 37, 41, 0.99), rgba(33, 37, 41, 0.97)), url("../assets/circuitboard.svg");
+  position: relative;
+
+}
+
 button:focus:not(:focus-visible) {
   outline: 0;
 }
