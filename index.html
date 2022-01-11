@@ -17,6 +17,66 @@
 </head>
 
 <body>
+    <script type="text/javascript">
+        function translatePage(value) {
+            if (value == "PT") {
+                //header
+                document.getElementById('h1p').innerHTML = "Software avançado, pesquisa avançada para empresas avançadas.";
+                document.getElementById('h1b').innerHTML = "Contactar&nbsp;&nbsp;<i class=\"bi bi-envelope\"></i>";
+                document.getElementById('h2b').innerHTML = "Saber Mais&nbsp;&nbsp;<i class=\"bi bi-arrow-down-circle\"></i>";
+
+                //aboutus
+                document.getElementById('a1h').innerHTML = "Sobre Nós";
+                document.getElementById('a1p').innerHTML = "Desde 2016, a prestar serviços a empresas que procuram soluções ageis ajustadas ao seu negócio.";
+                document.getElementById('a2p').innerHTML = "Somos uma empresa de desenvolvimento de software capaz de fornecer soluções com tecnologia de ponta, ajudando pequenas e médias empresas a resolver os mais complexos problemas que possam surgir na sua jornada de evolução digital. Disponibilizando serviços inovadores, o nosso maior foco é entregar soluções eficazmente com um menor custo.";
+
+                //services
+
+                //contact 
+                document.getElementById('c1h').innerHTML = "Contacte-nos";
+                document.getElementById('c1p').innerHTML = "As grandes empresa começam porque querem mudar o mundo.<br>Será um prazer contactar consigo.";
+
+                //contactform
+                document.getElementById('cfn').innerHTML = "Nome";
+                document.getElementById('cfm').innerHTML = "Mensagem";
+                document.getElementById('cfs').value = "Submeter";
+
+                //footer
+                document.getElementById('f1p').innerHTML = "<b>RandomBit&reg;</b> marca registada, 2022. Propriedade Intelectual, Industrial e Comercial de João Barreto.";
+
+                document.getElementById('languageSwitch').value = "EN";
+            }
+            if (value == "EN") {
+                //header
+                document.getElementById('h1p').innerHTML = "Advanced software, advanced research for advanced companies.";
+                document.getElementById('h1b').innerHTML = "Contact&nbsp;&nbsp;<i class=\"bi bi-envelope\"></i>";
+                document.getElementById('h2b').innerHTML = "Learn More&nbsp;&nbsp;<i class=\"bi bi-arrow-down-circle\"></i>";
+
+                //aboutus
+                document.getElementById('a1h').innerHTML = "About Us";
+                document.getElementById('a1p').innerHTML = "Since 2016, providing services to companies who are looking for agile solutions adjusted to their business operations.";
+                document.getElementById('a2p').innerHTML = "We are a software development company that provides cutting edge engineering solutions, helping small and medium-sized companies to untangle complex issues that emerge during their digital evolution journey. By delivering innovative services, our main focus is to deploy Solutions efficiently with less cost.";
+
+                //services
+
+
+                //contact
+                document.getElementById('c1h').innerHTML = "Contact Us";
+                document.getElementById('c1p').innerHTML = "Great companies start because they want to change the world.<br>We'd love to hear from you.";
+
+                //contactform
+                document.getElementById('cfn').innerHTML = "Name";
+                document.getElementById('cfm').innerHTML = "Message";
+                document.getElementById('cfs').value = "Submit";
+                
+                //footer
+                document.getElementById('f1p').innerHTML = "<b>RandomBit&reg;</b> registered brand, 2022. Intellectual, Industrial and Commercial property of João Barreto.";
+
+                document.getElementById('languageSwitch').value = "PT";
+            }
+        }
+    </script>
+
     <!-- Responsive navbar-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid px-5 text-right">
@@ -26,17 +86,10 @@
                     class="bi bi-facebook"></i></a>&nbsp;&nbsp;
             <a class="text-white" target="_blank" href="https://www.instagram.com/randombit.pt"><i
                     class="bi bi-instagram"></i></a>&nbsp;&nbsp;
-            <a class="text-white" target="_blank" href="mailto:info@randombit.pt"><i class="bi bi-envelope"></i></a>
-            <!-- <a class="navbar-brand" href="https://randombit.pt" style="color: #454545; font-size: small;">RandomBit</a> -->
-            <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!"></a></li>
-                         <li class="nav-item"><a class="nav-link" href="#!">AboutUs</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#!">Contact</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#!">Services</a></li>
-                    </ul>
-                </div> -->
+            <a class="text-white" target="_blank" href="mailto:info@randombit.pt"><i
+                    class="bi bi-envelope"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="translate-button text-white" value="PT" id="languageSwitch"
+                onclick="translatePage(this.value);"><i class="bi bi-translate"></i></button>
         </div>
     </nav>
 
@@ -46,19 +99,17 @@
             <div class="row gx-5 justify-content-center">
                 <div class="col-lg-6">
                     <div class="text-center my-5-header">
-                        <img src="assets/randombit2.png" class="img-fluid" alt="RandomBit" />
-                        <!-- <h1 class="display-5 fw-bolder text-white mb-2">RandomBit</h1> -->
+                        <img src="assets/randombit.png" class="img-fluid" alt="RandomBit" />
                         <h3 class="display-7 fw-bolder text-white mb-2">
                             Premium Software Development
                         </h3>
-                        <p class="lead text-white-50 mb-4">
+                        <p class="lead text-white-50 mb-4" id="h1p">
                             Advanced software, advanced research for advanced companies.
                         </p>
                         <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
-                            <!-- <a class="btn btn-primary btn-lg px-4 me-sm-3" href="#contact">Contact</a> -->
-                            <a class="btn btn-outline-light btn-lg px-4 rounded-4" href="#contact">Contact&nbsp;&nbsp;<i
-                                    class="bi bi-envelope"></i></a>
-                            <a class="btn btn-outline-light btn-lg px-4 rounded-4" href="#services">Learn
+                            <a class="btn btn-outline-light btn-lg px-4 rounded-4" href="#contact"
+                                id="h1b">Contact&nbsp;&nbsp;<i class="bi bi-envelope"></i></a>
+                            <a class="btn btn-outline-light btn-lg px-4 rounded-4" href="#services" id="h2b">Learn
                                 More&nbsp;&nbsp;<i class="bi bi-arrow-down-circle"></i></a>
                         </div>
                     </div>
@@ -71,14 +122,14 @@
     <section class="py-5 border-bottom" id="aboutus">
         <div class="container px-5 my-5">
             <div class="text-center mb-5">
-                <h2 class="fw-bolder">About Us</h2>
+                <h2 class="fw-bolder" id="a1h">About Us</h2>
                 <p></p>
-                <p class="lead mb-0">
+                <p class="lead mb-0" id="a1p">
                     Since 2016, providing services to companies who are looking for
                     agile solutions adjusted to their business operations.
                 </p>
                 <p></p>
-                <p class="lead mb-0">
+                <p class="lead mb-0" id="a2p">
                     We are a software development company that provides cutting edge engineering solutions, helping
                     small and medium-sized companies to untangle complex
                     issues that emerge during their digital evolution journey. By delivering innovative services,
@@ -168,7 +219,7 @@
         </div>
     </section>
 
-    <!-- Partners, Clients and Payments section-->
+    <!-- Assisted, Community and Payments section-->
     <section class="py-5 border-bottom">
         <div class="container px-5 my-5 px-5">
             <div class="text-center mb-5">
@@ -195,17 +246,17 @@
                 </div>
                 <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center">
                     <a target="_blank" href="https://dominios.pt"><img
-                            src="https://www.dominios.pt/wp-content/uploads/logo_png_color.png"
-                            class="img-fluid" alt="Dominios.pt" /></a>
+                            src="https://www.dominios.pt/wp-content/uploads/logo_png_color.png" class="img-fluid"
+                            alt="Dominios.pt" /></a>
                 </div>
                 <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center">
                     <a target="_blank" href="https://pcdiga.com"><img
                             src="https://static.pcdiga.com/media/Skrey_Brands/Brand_Image/p/c/pcdiga_logo_w.png"
                             class="img-fluid" alt="PCDiga" /></a>
                 </div>
-                        
+
             </div>
-            
+
         </div>
 
         <div class="container px-5 my-6 px-5">
@@ -276,14 +327,12 @@
     <section class="bg-light py-5-contactform">
         <div class="container px-5 my-5 px-5">
             <div class="text-center mb-5" id="contact">
-                <!-- <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3">
-                    <i class="bi bi-envelope"></i>
-                </div> -->
                 <img src="https://www.shipstersolutions.com/media/1507/loading-paper-airplane.gif" height="140px"
                     alt="Contact" />
-                <h2 class="fw-bolder">Contact Us</h2>
-                <p class="lead mb-0">Great companies start because they want to change the world.<br>We'd love to hear from
-                    you.</p>
+                <h2 class="fw-bolder" id="c1h">Contact Us</h2>
+                <p class="lead mb-0" id="c1p">Great companies start because they want to change the world.<br>We'd love
+                    to hear
+                    from you.</p>
             </div>
             <div class="row gx-5 justify-content-center">
                 <div class="col-lg-6">
@@ -293,7 +342,7 @@
                             <div class="form-floating mb-3">
                                 <input type="text" class="form-control rounded-5" name="name" id="full-name"
                                     placeholder="Name" required="" />
-                                <label for="full-name">Name</label>
+                                <label for="full-name" id="cfn">Name</label>
                             </div>
                             <div class="form-floating mb-3">
                                 <input type="email" class="form-control rounded-5" name="_replyto" id="email-address"
@@ -303,12 +352,12 @@
                             <div class="form-floating mb-3">
                                 <textarea rows="5" class="form-control rounded-5 " name="message" id="message"
                                     placeholder="Message" style="height: 10rem" maxlength="750" required=""></textarea>
-                                <label for="message">Message</label>
+                                <label for="message" id="cfm">Message</label>
                                 <input type="hidden" name="_subject" id="email-subject"
                                     value="Contact Form Submission" />
                             </div>
                             <div class="d-grid">
-                                <input type="submit" class="btn btn-primary btn-lg rounded-5" value="Submit" />
+                                <input type="submit" class="btn btn-primary btn-lg rounded-5" id="cfs" value="Submit" />
                             </div>
                         </fieldset>
                     </form>
@@ -320,7 +369,7 @@
     <!-- Footer-->
     <footer class="py-3 bg-dark">
         <div class="container px-5">
-            <p class="m-0 text-center small text-white-50">
+            <p class="m-0 text-center small text-white-50" id="f1p">
                 <b>RandomBit&reg;</b> registered brand, 2022. Intellectual, Industrial and
                 Commercial property of João Barreto.
             </p>

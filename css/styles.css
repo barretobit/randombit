@@ -595,6 +595,11 @@ progress {
   text-transform: uppercase;
 }
 
+.translate-button {
+  border-style: none;
+  background-color: transparent;
+}
+
 .blockquote {
   margin-bottom: 1rem;
   font-size: 1.25rem;
