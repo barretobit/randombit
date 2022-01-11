@@ -213,6 +213,10 @@ small, .small {
   font-size: 0.875em;
 }
 
+.smaller-footer {
+  font-size: 0.720em;
+}
+
 mark, .mark {
   padding: 0.2em;
   background-color: #fcf8e3;
@@ -7305,6 +7309,11 @@ textarea.form-control-lg {
   margin-bottom: 3rem !important;
 }
 
+.my-5-header {
+  margin-top: 2rem !important;
+  margin-bottom: 3rem !important;
+}
+
 .my-6 {
   margin-top: 7rem !important;
   margin-bottom: 3rem !important;
@@ -7373,6 +7382,12 @@ textarea.form-control-lg {
 
 .mb-0 {
   margin-bottom: 0 !important;
+}
+
+.mb-0-services {
+  margin-bottom: 0 !important;
+  padding-right: 3rem !important;
+  padding-left: 3rem !important;
 }
 
 .mb-1 {
@@ -7960,6 +7975,14 @@ textarea.form-control-lg {
 
 .rounded-3 {
   border-radius: 0.3rem !important;
+}
+
+.rounded-4 {
+  border-radius: 0.8rem !important;
+}
+
+.rounded-5 {
+  border-radius: 0.6rem !important;
 }
 
 .rounded-circle {
