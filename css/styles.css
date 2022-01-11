@@ -333,6 +333,10 @@ th {
   border-width: 0;
 }
 
+@media screen and (max-width: 992px) {
+  .mobile-space {margin-bottom:20px;}
+  }
+
 label {
   display: inline-block;
 }
