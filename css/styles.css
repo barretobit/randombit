@@ -76,6 +76,15 @@
   }
 }
 
+.languageDrop {
+  border-color: transparent;
+  background-color: transparent;
+}
+
+.languageOpt {
+  background-color: #212529;
+}
+
 body {
   margin: 0;
   font-family: var(--bs-body-font-family);
@@ -602,6 +611,7 @@ progress {
 .translate-button {
   border-style: none;
   background-color: transparent;
+  cursor: default !important;
 }
 
 .blockquote {
@@ -7831,6 +7841,10 @@ textarea.form-control-lg {
 .text-white-50 {
   --bs-text-opacity: 1;
   color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.language-mini {
+  font-size: 10.5px;
 }
 
 .text-reset {
