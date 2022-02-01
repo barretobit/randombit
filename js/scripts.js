@@ -1,9 +1,18 @@
+function sendMail(params) {
+    var tempParams = {
+        from_name: document.getElementById("full-name").value,
+        from_email: document.getElementById("email-address").value,
+        message: document.getElementById("message").value
+    };
 
+    emailjs.send("service_dnbjbgq", "template_f07m72a", tempParams).then(function (res) {
+        console.log("success", res.status);
+    })
+}
 
 function translateFunction(value) {
 
-    if (value == "PT") 
-    {
+    if (value == "PT") {
         document.getElementById('header1').innerHTML = TranslatePT.header1;
         document.getElementById('header2').innerHTML = TranslatePT.header2;
         document.getElementById('header3').innerHTML = TranslatePT.header3;
@@ -25,9 +34,9 @@ function translateFunction(value) {
         document.getElementById('service13').innerHTML = TranslatePT.service13;
         document.getElementById('service14').innerHTML = TranslatePT.service14;
         document.getElementById('assisted1').innerHTML = TranslatePT.assisted1;
-        document.getElementById('assisted2').innerHTML = TranslatePT.assisted2;         
+        document.getElementById('assisted2').innerHTML = TranslatePT.assisted2;
         document.getElementById('community1').innerHTML = TranslatePT.community1;
-        document.getElementById('community2').innerHTML = TranslatePT.community2;       
+        document.getElementById('community2').innerHTML = TranslatePT.community2;
         document.getElementById('payments1').innerHTML = TranslatePT.payments1;
         document.getElementById('payments2').innerHTML = TranslatePT.payments2;
         document.getElementById('contact1').innerHTML = TranslatePT.contact1;
@@ -35,11 +44,10 @@ function translateFunction(value) {
         document.getElementById('contactform1').innerHTML = TranslatePT.contactform1;
         document.getElementById('contactform2').innerHTML = TranslatePT.contactform2;
         document.getElementById('contactform3').innerHTML = TranslatePT.contactform3;
-        document.getElementById('contactform4').value = TranslatePT.contactform4;        
+        document.getElementById('contactform4').value = TranslatePT.contactform4;
         document.getElementById('footer').innerHTML = TranslatePT.footer;
     }
-    if (value == "EN") 
-    {
+    if (value == "EN") {
         document.getElementById('header1').innerHTML = TranslateEN.header1;
         document.getElementById('header2').innerHTML = TranslateEN.header2;
         document.getElementById('header3').innerHTML = TranslateEN.header3;
@@ -61,9 +69,9 @@ function translateFunction(value) {
         document.getElementById('service13').innerHTML = TranslateEN.service13;
         document.getElementById('service14').innerHTML = TranslateEN.service14;
         document.getElementById('assisted1').innerHTML = TranslateEN.assisted1;
-        document.getElementById('assisted2').innerHTML = TranslateEN.assisted2;         
+        document.getElementById('assisted2').innerHTML = TranslateEN.assisted2;
         document.getElementById('community1').innerHTML = TranslateEN.community1;
-        document.getElementById('community2').innerHTML = TranslateEN.community2;       
+        document.getElementById('community2').innerHTML = TranslateEN.community2;
         document.getElementById('payments1').innerHTML = TranslateEN.payments1;
         document.getElementById('payments2').innerHTML = TranslateEN.payments2;
         document.getElementById('contact1').innerHTML = TranslateEN.contact1;
@@ -71,11 +79,10 @@ function translateFunction(value) {
         document.getElementById('contactform1').innerHTML = TranslateEN.contactform1;
         document.getElementById('contactform2').innerHTML = TranslateEN.contactform2;
         document.getElementById('contactform3').innerHTML = TranslateEN.contactform3;
-        document.getElementById('contactform4').value = TranslateEN.contactform4;        
+        document.getElementById('contactform4').value = TranslateEN.contactform4;
         document.getElementById('footer').innerHTML = TranslateEN.footer;
     }
-    if (value == "DE") 
-    {
+    if (value == "DE") {
         document.getElementById('header1').innerHTML = TranslateDE.header1;
         document.getElementById('header2').innerHTML = TranslateDE.header2;
         document.getElementById('header3').innerHTML = TranslateDE.header3;
@@ -97,9 +104,9 @@ function translateFunction(value) {
         document.getElementById('service13').innerHTML = TranslateDE.service13;
         document.getElementById('service14').innerHTML = TranslateDE.service14;
         document.getElementById('assisted1').innerHTML = TranslateDE.assisted1;
-        document.getElementById('assisted2').innerHTML = TranslateDE.assisted2;         
+        document.getElementById('assisted2').innerHTML = TranslateDE.assisted2;
         document.getElementById('community1').innerHTML = TranslateDE.community1;
-        document.getElementById('community2').innerHTML = TranslateDE.community2;       
+        document.getElementById('community2').innerHTML = TranslateDE.community2;
         document.getElementById('payments1').innerHTML = TranslateDE.payments1;
         document.getElementById('payments2').innerHTML = TranslateDE.payments2;
         document.getElementById('contact1').innerHTML = TranslateDE.contact1;
@@ -107,11 +114,10 @@ function translateFunction(value) {
         document.getElementById('contactform1').innerHTML = TranslateDE.contactform1;
         document.getElementById('contactform2').innerHTML = TranslateDE.contactform2;
         document.getElementById('contactform3').innerHTML = TranslateDE.contactform3;
-        document.getElementById('contactform4').value = TranslateDE.contactform4;        
+        document.getElementById('contactform4').value = TranslateDE.contactform4;
         document.getElementById('footer').innerHTML = TranslateDE.footer;
     }
-    if (value == "CN") 
-    {
+    if (value == "CN") {
         document.getElementById('header1').innerHTML = TranslateCN.header1;
         document.getElementById('header2').innerHTML = TranslateCN.header2;
         document.getElementById('header3').innerHTML = TranslateCN.header3;
@@ -133,9 +139,9 @@ function translateFunction(value) {
         document.getElementById('service13').innerHTML = TranslateCN.service13;
         document.getElementById('service14').innerHTML = TranslateCN.service14;
         document.getElementById('assisted1').innerHTML = TranslateCN.assisted1;
-        document.getElementById('assisted2').innerHTML = TranslateCN.assisted2;         
+        document.getElementById('assisted2').innerHTML = TranslateCN.assisted2;
         document.getElementById('community1').innerHTML = TranslateCN.community1;
-        document.getElementById('community2').innerHTML = TranslateCN.community2;       
+        document.getElementById('community2').innerHTML = TranslateCN.community2;
         document.getElementById('payments1').innerHTML = TranslateCN.payments1;
         document.getElementById('payments2').innerHTML = TranslateCN.payments2;
         document.getElementById('contact1').innerHTML = TranslateCN.contact1;
@@ -143,7 +149,7 @@ function translateFunction(value) {
         document.getElementById('contactform1').innerHTML = TranslateCN.contactform1;
         document.getElementById('contactform2').innerHTML = TranslateCN.contactform2;
         document.getElementById('contactform3').innerHTML = TranslateCN.contactform3;
-        document.getElementById('contactform4').value = TranslateCN.contactform4;        
+        document.getElementById('contactform4').value = TranslateCN.contactform4;
         document.getElementById('footer').innerHTML = TranslateCN.footer;
     }
 }
