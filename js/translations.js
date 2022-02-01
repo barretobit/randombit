@@ -31,6 +31,7 @@ class TranslatePT {
     static contactform2 = "Email";
     static contactform3 = "Mensagem";
     static contactform4 = "Submeter";
+    static contactform5 = "Submetido com sucesso ✔️";
     static footer = "<b>RandomBit&reg;</b> marca registada, 2022. Propriedade Intelectual, Industrial e Comercial de João Barreto.";
 }
 
@@ -67,6 +68,7 @@ class TranslateEN {
     static contactform2 = "Email";
     static contactform3 = "Message";
     static contactform4 = "Submit";
+    static contactform5 = "Successfully submited ✔️";
     static footer = "<b>RandomBit&reg;</b> registered brand, 2022. Intellectual, Industrial and Commercial property of João Barreto.";
 }
 
@@ -103,6 +105,7 @@ class TranslateDE {
     static contactform2 = "Email";
     static contactform3 = "Nachricht";
     static contactform4 = "Einreichen";
+    static contactform5 = "Erfolgreich gesendet ✔️";
     static footer = "<b>RandomBit&reg;</b> eingetragene marke, 2022. Geistiges, gewerbliches und kommerzielles Eigentum von João Barreto.";
 }
 
@@ -139,5 +142,6 @@ class TranslateCN {
     static contactform2 = "Email";
     static contactform3 = "Mensagem";
     static contactform4 = "Submeter";
+    static contactform5 = "Submetido com sucesso ✔️";
     static footer = "<b>RandomBit&reg;</b> marca registada, 2022. Propriedade Intelectual, Industrial e Comercial de João Barreto.";
 }

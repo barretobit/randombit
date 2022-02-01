@@ -45,6 +45,7 @@ function translateFunction(value) {
         document.getElementById('contactform2').innerHTML = TranslatePT.contactform2;
         document.getElementById('contactform3').innerHTML = TranslatePT.contactform3;
         document.getElementById('contactform4').value = TranslatePT.contactform4;
+        document.getElementById('contactform5').innerHTML = TranslatePT.contactform5;
         document.getElementById('footer').innerHTML = TranslatePT.footer;
     }
     if (value == "EN") {
@@ -80,6 +81,7 @@ function translateFunction(value) {
         document.getElementById('contactform2').innerHTML = TranslateEN.contactform2;
         document.getElementById('contactform3').innerHTML = TranslateEN.contactform3;
         document.getElementById('contactform4').value = TranslateEN.contactform4;
+        document.getElementById('contactform5').innerHTML = TranslateEN.contactform5;
         document.getElementById('footer').innerHTML = TranslateEN.footer;
     }
     if (value == "DE") {
@@ -115,6 +117,7 @@ function translateFunction(value) {
         document.getElementById('contactform2').innerHTML = TranslateDE.contactform2;
         document.getElementById('contactform3').innerHTML = TranslateDE.contactform3;
         document.getElementById('contactform4').value = TranslateDE.contactform4;
+        document.getElementById('contactform5').innerHTML = TranslateDE.contactform5;
         document.getElementById('footer').innerHTML = TranslateDE.footer;
     }
     if (value == "CN") {
@@ -150,6 +153,7 @@ function translateFunction(value) {
         document.getElementById('contactform2').innerHTML = TranslateCN.contactform2;
         document.getElementById('contactform3').innerHTML = TranslateCN.contactform3;
         document.getElementById('contactform4').value = TranslateCN.contactform4;
+        document.getElementById('contactform5').innerHTML = TranslateCN.contactform5;
         document.getElementById('footer').innerHTML = TranslateCN.footer;
     }
 }
