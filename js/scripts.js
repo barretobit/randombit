@@ -1,13 +1,84 @@
-function sendMail(params) {
-    var tempParams = {
+function submitForm() {
+    enteredName = document.getElementById("full-name").value;
+    enteredEmail = document.getElementById("email-address").value;
+
+    if (stringIsEmpty(enteredName)) {
+        returnMessageNOKName();
+        return false;
+    }
+
+    if (stringIsEmpty(enteredEmail)) {
+        returnMessageNOKEmail();
+        return false;
+    }
+
+    if (!validateEmail(enteredEmail)) {
+        returnMessageNOKEmail();
+        return false;
+    }
+
+    var params = {
         from_name: document.getElementById("full-name").value,
         from_email: document.getElementById("email-address").value,
+        from_phone: document.getElementById("phone-number").value,
         message: document.getElementById("message").value
     };
 
-    emailjs.send("service_dnbjbgq", "template_f07m72a", tempParams).then(function (res) {
-        console.log("success", res.status);
+    emailjs.send("service_dnbjbgq", "template_f07m72a", params).then(function (res) {
+        console.log("Submited Successfully ✔️", res.status);
+        returnMessageOK();
     })
+}
+
+function stringIsEmpty(str) {
+    return (!str || str.length === 0);
+}
+
+function validateEmail(email) {
+    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
+        return (true)
+    }
+    return (false)
+}
+
+function returnMessageOK() {
+    document.getElementById("full-name").value = "";
+    document.getElementById("email-address").value = "";
+    document.getElementById("phone-number").value = "";
+    document.getElementById("message").value = "";
+    let messageP = document.getElementById("contactform5");
+    messageP.removeAttribute("hidden");
+    setTimeout(() => {
+        document.getElementById("contactform5").hidden = true;
+    }, 5000);
+}
+
+function returnMessageNOK() {
+    document.getElementById("full-name").value = "";
+    document.getElementById("email-address").value = "";
+    document.getElementById("phone-number").value = "";
+    document.getElementById("message").value = "";
+    let messageP = document.getElementById("contactform7");
+    messageP.removeAttribute("hidden");
+    setTimeout(() => {
+        document.getElementById("contactform7").hidden = true;
+    }, 5000);
+}
+
+function returnMessageNOKEmail() {
+    let messageP = document.getElementById("contactform8");
+    messageP.removeAttribute("hidden");
+    setTimeout(() => {
+        document.getElementById("contactform8").hidden = true;
+    }, 5000);
+}
+
+function returnMessageNOKName() {
+    let messageP = document.getElementById("contactform9");
+    messageP.removeAttribute("hidden");
+    setTimeout(() => {
+        document.getElementById("contactform9").hidden = true;
+    }, 5000);
 }
 
 function translateFunction(value) {

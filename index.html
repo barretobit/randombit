@@ -20,16 +20,6 @@
 <body>
     <script type="text/javascript">
         function translatePage(value) { translateFunction(value); }
-        function returnMessage() {
-            document.getElementById("full-name").value = "";
-            document.getElementById("email-address").value = "";
-            document.getElementById("message").value = "";
-            let messageP = document.getElementById("contactform5");
-            messageP.removeAttribute("hidden");
-            setTimeout(() => {
-                document.getElementById("contactform5").hidden = true;
-            }, 5000);
-        }
         (function () { emailjs.init("user_m27LT1phpubuLUDLxocV9"); })();
     </script>
 
@@ -44,8 +34,9 @@
                     class="bi bi-instagram"></i></a>&nbsp;&nbsp;
             <a class="text-white" target="_blank" href="mailto:info@randombit.pt"><i
                     class="bi bi-envelope"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <button class="translate-button text-white"><i class="bi bi-translate"></i></button><select
-                name="languageDrop" class="languageDrop text-white language-mini" onchange="translatePage(this.value);">
+            <button class="translate-button text-white"><i class="bi bi-translate"></i></button>
+            <select name="languageDrop" class="languageDrop text-white language-mini"
+                onchange="translatePage(this.value);">
                 <option class="languageOpt" value="EN" selected>EN</option>
                 <option class="languageOpt" value="PT">PT</option>
                 <option class="languageOpt" value="DE">DE</option>
@@ -287,9 +278,7 @@
                     alt="Contact" />
                 <h2 class="fw-bolder" id="contact1">Contact Us</h2>
                 <p class="lead mb-0" id="contact2">Great companies start because they want to change the world.<br>We'd
-                    love
-                    to hear
-                    from you.</p>
+                    love to hear from you.</p>
             </div>
             <div class="row gx-5 justify-content-center">
                 <div class="col-lg-6">
@@ -300,19 +289,27 @@
                             <label for="full-name" id="contactform1">Name</label>
                         </div>
                         <div class="form-floating mb-3">
-                            <input type="email" class="form-control rounded-5" name="_replyto" id="email-address"
-                                placeholder="Email" required="" />
+                            <input type="email" class="form-control rounded-5" id="email-address" placeholder="Email"
+                                required="" />
                             <label for="email-address" id="contactform2">Email</label>
                         </div>
                         <div class="form-floating mb-3">
+                            <input type="number" class="form-control rounded-5" id="phone-number"
+                                placeholder="Phone Number" pattern="[0-9]+" />
+                            <label for="phone-number" id="contactform6">Phone Number</label>
+                        </div>
+                        <div class="form-floating mb-3">
                             <textarea rows="5" class="form-control rounded-5 " name="message" id="message"
-                                placeholder="Message" style="height: 10rem" maxlength="750" required=""></textarea>
+                                placeholder="Message" style="height: 10rem" maxlength="750"></textarea>
                             <label for="message" id="contactform3">Message</label>
                         </div>
                         <div class="d-grid">
-                            <input type="submit" class="btn btn-primary btn-lg rounded-5" onclick="sendMail(); returnMessage();"
+                            <input type="submit" class="btn btn-primary btn-lg rounded-5" onclick="submitForm();"
                                 id="contactform4" value="Submit" /><br>
                             <p class="lead mb-0 text-center" id="contactform5" hidden>Successfully submited ✔️</p>
+                            <p class="lead mb-0 text-center" id="contactform7" hidden>Failed to submit ❌</p>
+                            <p class="lead mb-0 text-center" id="contactform8" hidden>Invalid Email ❗</p>
+                            <p class="lead mb-0 text-center" id="contactform9" hidden>Invalid Name ❗</p>
                         </div>
                     </fieldset>
                 </div>
